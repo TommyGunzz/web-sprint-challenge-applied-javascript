@@ -66,4 +66,4 @@ function cardsMaker(data){
         
         console.log (data);
         return divCardMaker;
-    };       
+    }       
