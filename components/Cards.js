@@ -44,26 +44,33 @@ function cardsMaker(data){
         document.createElement('div');
     const divAuthorMaker=
         document.createElement('div');
-    const divImgMaker=
+    const divImg=
         document.createElement('div');
-    const imgMaker=
+    const img=
         document.createElement('img');
+   // const srcMaker=
+   //     document.createElement('src');
     const spanMaker=
         document.createElement('span');
 
         divCardMaker.append(divHeadlineMaker);
         divCardMaker.append(divAuthorMaker);
-        divAuthorMaker.append(divImgMaker);
+        divAuthorMaker.append(divImg);
         divAuthorMaker.append(spanMaker);
-        divImgMaker.append(imgMaker);
+        divImg.append(img);
+        
         divCardMaker.classList.add('card');
         divHeadlineMaker.classList.add('headline');
         divAuthorMaker.classList.add('author');
-        divImgMaker.classList.add('img-container');
+        divImg.classList.add('img-container');
+        img.src=data.authorPhoto;
         divHeadlineMaker.textContent=data.headline;
-        imgMaker.src=data.authorPhoto;
         spanMaker.textContent=data.authorName;
-        
-        console.log (data);
-        return divCardMaker;
+
+    divCardMaker.addEventListener('click', () => {
+        console.log(divHeadlineMaker.textContent=data.headline);
+
+    });
+
+    return divCardMaker;
     }       
