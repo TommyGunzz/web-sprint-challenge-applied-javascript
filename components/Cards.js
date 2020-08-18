@@ -57,13 +57,15 @@ function cardsMaker(data){
         divCardMaker.append(divAuthorMaker);
         divAuthorMaker.append(divImg);
         divAuthorMaker.append(spanMaker);
-        divImg.append(img);
-        
+        divImg.appendChild(img);
+        // eslint-disable-next-line no-useless-escape
+        img.src=('C:\Users\tom_3\tommys-lambda-unit2\web-sprint-challenge-applied-javascript\assets\sir.jpg.url');
         divCardMaker.classList.add('card');
         divHeadlineMaker.classList.add('headline');
         divAuthorMaker.classList.add('author');
         divImg.classList.add('img-container');
-        img.src=data.authorPhoto;
+        
+
         divHeadlineMaker.textContent=data.headline;
         spanMaker.textContent=data.authorName;
 
